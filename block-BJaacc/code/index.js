@@ -4,7 +4,7 @@ let students = {};
 // 2. Add a key of the value of variable `studentName` in the object created above with the value of your name.
 students.studentsName = "Ankit";
 // 3. Using `console.log` log the value of `studentName` key from the `students` object
-console.log(students);
+console.log(students.studentsName);
 // 4. Add a another key of the value of variable `batch` in the object with the value of 16.
 students[batch] = 16;
 // 5. Using `console.log` log the value of `batch` key from the `students` object
@@ -18,7 +18,7 @@ students[42] = "The answer to the meaning of life";
 // 9. Using `console.log` print the value of key `42` from the `students` object
 console.log(students[42]);
 // 10. Check the length of object named `students`.
-Object.keys(students).length;
+console.log(students.length);
 // 11. Can you define a key of `let or var` in any object? Reason.
 We can also define let and var as an object .
 // 12. Delete the `isAdult` property from the object `students`. Also, print the object before or after deleting the property
