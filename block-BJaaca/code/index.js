@@ -28,7 +28,7 @@ character.title = "Lady of Winterfell";
 // - Add another property named `greet` and value should be a function when called should alert `I am [NAME HERE] and my title is [TITLE HERE]`.
 
 character.greet = function () {
-    alert(`I am ${this.characterName} and my title is ${this.title}`);
+  alert(`I am ${this.characterName} and my title is ${this.title}`);
 };
 console.log(character);
 
@@ -40,7 +40,7 @@ character.greet();
 
 //  - Change the method `greet` to now alert `She is [NAME HERE] and her title is [TITLE HERE]`.
 character.greet = function () {
-  //   alert(`She is ${this.characterName} and her title is ${this.title}`);
+  alert(`She is ${this.characterName} and her title is ${this.title}`);
 };
 
 // - Check by calling `greet` and see if the message changed or not.
