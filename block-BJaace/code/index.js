@@ -42,7 +42,7 @@ colors.shift();
 // 14. Remove the last color from the end of list, and then print the length of the array to the console one more time.
 colors.pop();
 // 15. Remove the second color from the end of list.
-
+delete colors[colors.length - 2];
 // 16. Write a for loop to iterate through every element in the array and print each element to the console.
 for (let i = 0; i < colors.length; i++) {
   console.log(colors[i]);
