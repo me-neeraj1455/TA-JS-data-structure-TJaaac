@@ -65,45 +65,72 @@ console.log(movies[0].genres[movies.length - 1]);
 // 17. Log the first genres of the second movie (using the length property of array)
 console.log(movies[1].genres[0]);
 // 18. Log all the genres of the first movie one by one
-// console.log(movies[0].genres);
-// 19. Log all the genres of the second movie one by one
-// console.log(movies[1].genres);
-// 20. Log if the first actor of the first movie is `Rachel McAdams` or not (You have to log true or false)
-// for (let movie of movies) {
-//   if (movie.actors === `Rachel McAdams`) {
-//     console.log(true);
-//   } else {
-//     console.log(false);
-//   }
-// }
-// 21. Log if the second actor (index 1) of the second movie is `Natalie Portman` or not (You have to log true or false)
-
-// 22. Log if the year of all three movies is greater than `2017` or not one by one. (Log true or false)
-
-// 23. Log the title of all three movies one by one.
-// console.log(movies.title);
-// 24. Log if the title of the first movie is `Hannah` or not
-
-// 25. Log the number of actors in all three movies one by one
-let actorsCount = 0;
-let count1 = 0,
-  count2 = 0,
-  count3 = 0;
-
-for (let i = 0; i < movies.length; i++) {
-  count1 = movies[0].actors.length;
-  count2 = movies[1].actors.length;
-  count3 = movies[2].actors.length;
+for (let genre of movies[0].genres) {
+  console.log(genre);
 }
-actorsCount = count1 + count2 + count3;
-console.log(actorsCount);
+// 19. Log all the genres of the second movie one by one
+for (let genre of movies[1].genres) {
+  console.log(genre);
+}
+// 20. Log if the first actor of the first movie is `Rachel McAdams` or not (You have to log true or false)
+console.log(movies[0].actors[0] == "Rachel McAdams");
+// 21. Log if the second actor (index 1) of the second movie is `Natalie Portman` or not (You have to log true or false)
+console.log(movies[1].actors[1] == "Natalie Portman");
+// 22. Log if the year of all three movies is greater than `2017` or not one by one. (Log true or false)
+for (let movie of movies) {
+  console.log(movie.year > 2017);
+}
+// 23. Log the title of all three movies one by one.
+for (let movie of movies) {
+  console.log(movie.title);
+}
+// 24. Log if the title of the first movie is `Hannah` or not
+console.log(movies[0].title == `Hannah`);
+// 25. Log the number of actors in all three movies one by one
+// let actorsCount = 0;
+// let count1 = 0,
+//   count2 = 0,
+//   count3 = 0;
+
+// for (let i = 0; i < movies.length; i++) {
+//   count1 = movies[0].actors.length;
+//   count2 = movies[1].actors.length;
+//   count3 = movies[2].actors.length;
+// }
+// actorsCount = count1 + count2 + count3;
+// console.log(actorsCount);
+
+for (let movie of movies) {
+  for (let actor of movie.actors) {
+    console.log(actor, "actors");
+  }
+}
 
 // 26. Log the number of genres in all three movies one by one
-console.log(movies.genres);
+for (let movie of movies) {
+  console.log(movie.genres.length);
+}
 // 27. Log the name of all the movies with more than 1 genre
-
+for (let movie of movies) {
+  if (movie.genres.length > 1) {
+    console.log(movie.title, "name");
+  }
+}
 // 28. Log the name of all the movies with more than 1 actors
-
+for (let movie of movies) {
+  if (movie.actors.length > 1) {
+    console.log(movie.actors, "actors");
+  }
+}
 // 29. Log the name of all the movies with exactly 3 actors
-
+for (let movie of movies) {
+  if (movie.actors.length === 3) {
+    console.log(movie.actors, "actors");
+  }
+}
 // 30. Log the name of all the movies with year `2018`
+for (let movie of movies) {
+  if (movie.year == 2018) {
+    console.log(movie.year, "year");
+  }
+}
