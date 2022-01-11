@@ -83,20 +83,36 @@ nameAndSize.Starks = got.houses[0].people.length;
 nameAndSize.Lannister = got.houses[1].people.length;
 console.log(nameAndSize);
 // 15. Log the name of all the people of all the houses in got one by one
-let peopleName = [];
-for (let i = 0; i < got.houses[i].people.length; i++) {
-  peopleName.push(got.houses[i].people[i].name);
+for (let house of got.houses) {
+  for (let people of house.people) {
+    console.log(people.name);
+  }
 }
-console.log(peopleName);
 // 16. Push all names into a new array named `allPeople` and log the value array.
 let allPeople = [];
-for (let name of got.houses) {
-  
+for (let house of got.houses) {
+  for (let people of house.people) {
+    allPeople.push(people.name);
+  }
 }
+console.log(allPeople);
 // 17. Log the value and length of `allPeople` array created above
-
+console.log(allPeople, allPeople.length);
 // 18. Push all descriptions into an array named `allDescription`
-
+let allDescription = [];
+for (let house of got.houses) {
+  for (let people of house.people) {
+    allDescription.push(people.description);
+  }
+}
+console.log(allDescription);
 // 19. Log the value and length `allDescription`
-
-// 20. Only the the description whose length is more than 30. (use .length property on string to get the length)
+console.log(allDescription, allDescription.length);
+// 20.log Only the the description whose length is more than 30. (use .length property on string to get the length)
+for (let house of got.houses) {
+  for (let people of house.people) {
+    if (people.description.length > 30) {
+      console.log(people.description);
+    }
+  }
+}
