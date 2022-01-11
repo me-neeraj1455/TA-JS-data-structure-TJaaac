@@ -3,11 +3,24 @@ let numbers = [6, 8, 10, 12, 43, 56, 98];
 let userIds = [1230, 234, 1278, 984, 763, 900];
 
 // 1. Add all the values of numbers and userIds array into the new newly created array named `collection`
-
+let collection = [...numbers, ...userIds];
+// console.log(collection);
 // 2. Add all the even numbers from both arrays numbers and userIds into a newly created array named `evenCollection`
-
+let evenCollection = [];
+for (let number of collection) {
+  if (number % 2 === 0) {
+    evenCollection.push(number);
+  }
+}
+console.log(evenCollection);
 // 3. Add all the odd numbers from both arrays numbers and userIds into a newly created array named `oddCollection`
-
+let oddCollection = [];
+for (number of collection) {
+  if (number % 2 !== 0) {
+    oddCollection.push(number);
+  }
+}
+console.log(oddCollection);
 /*
   @param means parameter
 
@@ -24,13 +37,19 @@ let userIds = [1230, 234, 1278, 984, 763, 900];
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
 
-function times() {
-  // Your code
-}
+// function times(a, b) {
+//   if (a === "number" && b === " ") {
+//     return ["b".repeat(a)];
+//   }
+//   elseif(a === "number");
+//   {
+//     return ["test".repeat(a)];
+//   }
+// }
 
 // Uncomment the code below and test the output
 
-// console.log(times(5, 'c')); // ['c', 'c', 'c', 'c', 'c']
+// console.log(times(5, "c")); // ['c', 'c', 'c', 'c', 'c']
 // console.log(times(2, 'a')); // ['a', 'a']
 // console.log(times(0)); // []
 // console.log(times(5)); // ['test', 'test', 'test', 'test', 'test']
@@ -48,12 +67,12 @@ function times() {
     revert(['Ryan', 'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function revert() {
-  // your code
+function revert([]) {
+  return [].reverse();
 }
 
 // Uncomment the code below and test the output
-// console.log(revert([1, 2, 3, 4])); // [4, 3, 2, 1]
+console.log(revert([1, 2, 3, 4])); // [4, 3, 2, 1]
 // console.log(revert(['a', 'd', 'c', 'b'])); // ['b', 'c', 'd', 'a']
 // console.log(revert(['Ryan', 'John', 'Bran'])); //['Bran', 'John', 'Ryan']
 
