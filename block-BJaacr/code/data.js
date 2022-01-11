@@ -67,10 +67,14 @@ const got = {
   ],
 };
 
-let allPeople = [];
-for (let i = 0; i < got.houses.length; i++) {
-  for (let name of got.houses[i].people[i].name) {
-    allPeople.push(name);
+let allDescription = [];
+for (let house of got.houses) {
+  for (let people of house.people) {
+    allDescription.push(people.description);
   }
 }
-console.log(allPeople);
+for (let description of allDescription) {
+  if (description.length > 30) {
+    console.log(description);
+  }
+}
